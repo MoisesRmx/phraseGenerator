@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/api', (req, res) => {
-  res.status(200).sendFile(`/var/task/app/index.html`)
+  res.status(200).sendFile(`./var/task/app/index.html`)
 })
 
 export default router;
