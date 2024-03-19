@@ -3,9 +3,9 @@ import router from './routes/index.routes.js';
 
 const app = express();
 
-router.use('/resources', express.static(`${process.cwd()}/app/resources/`))
+router.use('/api/resources', express.static(`${process.cwd()}/app/resources/`))
 
-app.use('/', router)
+app.use(router)
 
 app.use((req, res) => {
   res.status(404).send("<h1>La pagina que buscas no existe, intenta con otra ruta</h1>")
