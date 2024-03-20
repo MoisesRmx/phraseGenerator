@@ -1,9 +1,10 @@
 import express from 'express';
 import router from './routes/index.routes.js';
+import path from 'path';
 
 const app = express();
 
-router.use('/api/resources', express.static(`${process.cwd()}/app/resources/`))
+router.use('/src', express.static(path.join(`${process.cwd()}/app/resources/`)))
 
 app.use(router)
 

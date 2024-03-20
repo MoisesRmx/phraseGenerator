@@ -1,13 +1,10 @@
-import express, { Router } from 'express';
+import { Router } from 'express';
+import path from 'path'
 
 const router = Router();
 
 router.get('/', (req, res) => {
-  res.status(200).send(`${process.cwd()}/app/index.html`)
-})
-
-router.get('/api', (req, res) => {
-  res.status(200).sendFile(`./var/task/app/index.html`)
+  res.status(200).sendFile(path.join(`${process.cwd()}/app/index.html`))
 })
 
 export default router;
